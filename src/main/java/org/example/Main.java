@@ -61,8 +61,6 @@ public class Main {
             }
         } catch (InputMismatchException | SQLException | InterruptedException e) {
             System.out.println(e.getMessage());
-            ;
         }
-
     }
 }
