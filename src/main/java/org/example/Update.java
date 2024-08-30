@@ -19,7 +19,7 @@ import java.sql.Statement;
 
 
                 sc.nextLine();System.out.print("Enter New Contact: ");
-                int contact = sc.nextInt();
+                long contact = sc.nextInt();
 
                 System.out.print("Enter New Room No: ");
                 int room = sc.nextInt();

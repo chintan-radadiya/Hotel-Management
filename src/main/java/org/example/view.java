@@ -17,7 +17,7 @@ public class view {
                 int Id = resultset.getInt("guest_id");
                 String name = resultset.getString("guest_name");
                 int room = resultset.getInt("room_number");
-                String contact = resultset.getString("contact");
+                long contact = resultset.getLong("contact");
                 String resv_date = resultset.getTimestamp("reservation_date").toString();
 
                 System.out.println("************************");

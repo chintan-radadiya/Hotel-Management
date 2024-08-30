@@ -9,12 +9,12 @@ public class reserveRoom {
     public static void reserveRoom(Statement statement,Scanner sc) throws SQLException{
 
 
-            System.out.print("Enter Geust Name: ");
+            System.out.print("Enter Guest Name: ");
             String name = sc.next();
             sc.nextLine();
 
             System.out.print("Enter Guest Mobile Number: ");
-            int mobile = sc.nextInt();
+            long mobile = sc.nextInt();
             sc.nextLine();
 
             System.out.print("Allocate a room to guest: ");
