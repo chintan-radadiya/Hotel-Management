@@ -47,6 +47,7 @@ public class Main {
                         view.viewReservations(statement);
                         break;
                     case 3:
+                        roomNumber.getRoom(statement,sc);
                         break;
                     case 4:
                         break;
@@ -60,11 +61,7 @@ public class Main {
                     default:
                         System.out.println("Invalid Choice!!!");
                 }
-
-
-
             }
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
