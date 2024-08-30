@@ -18,10 +18,10 @@ public class reserveRoom {
             sc.nextLine();
 
             System.out.print("Allocate a room to guest: ");
-            int roomNo = sc.nextInt();
+            int room_no = sc.nextInt();
             sc.nextLine();
 
-            String query = "Insert into reservations (guest_name,contact,room_number) VALUES ('"+name+"',"+mobile+", "+roomNo+" )";
+            String query = "Insert into reservations (guest_name,contact,room_number) VALUES ('"+name+"',"+mobile+", "+room_no+" )";
 
             try{
                 int row = 0;
