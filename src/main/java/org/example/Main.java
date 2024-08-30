@@ -7,11 +7,12 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException, SQLException,InterruptedException {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException, InterruptedException {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -50,6 +51,7 @@ public class Main {
                         roomNumber.getRoom(statement,sc);
                         break;
                     case 4:
+                        Update.updateDetails(statement,sc);
                         break;
                     case 5:
                         Deletion.delete(statement,sc);
@@ -62,8 +64,8 @@ public class Main {
                         System.out.println("Invalid Choice!!!");
                 }
             }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+        } catch (InputMismatchException | SQLException | InterruptedException e){
+            System.out.println(e.getMessage());;
         }
 
     }
