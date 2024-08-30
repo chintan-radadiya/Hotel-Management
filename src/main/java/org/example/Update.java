@@ -17,7 +17,6 @@ import java.sql.Statement;
                 System.out.print("Enter New Guest Name: ");
                 String name = sc.next();
 
-
                 sc.nextLine();System.out.print("Enter New Contact: ");
                 long contact = sc.nextInt();
 
@@ -30,9 +29,7 @@ import java.sql.Statement;
                         "room_number = '"+room+"'";
 
                 int row = 0;
-
                 row = statement.executeUpdate(query);
-
                 if(row > 0){
                     System.out.println("Updation Successfull!!");
                 }else{
@@ -42,7 +39,5 @@ import java.sql.Statement;
             }catch(SQLException e){
                 System.out.println(e.getMessage());
         }
-
     }
-
 }

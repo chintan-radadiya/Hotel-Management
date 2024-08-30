@@ -1,15 +1,11 @@
 package org.example;
 
-
-
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
-import java.sql.ResultSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException, InterruptedException {
@@ -19,7 +15,6 @@ public class Main {
         } catch (ClassNotFoundException e) {
             System.out.println(e.getMessage());
         }
-//        System.out.println("Drivers loaded successfully!!!");
 
         String url = "jdbc:mysql://localhost:3306/hotel_db";
         String username = "root";
@@ -42,19 +37,19 @@ public class Main {
 
                 switch (choice) {
                     case 1:
-                        reserveRoom.reserveRoom(statement,sc);
+                        reserveRoom.reserveRoom(statement, sc);
                         break;
                     case 2:
                         view.viewReservations(statement);
                         break;
                     case 3:
-                        roomNumber.getRoom(statement,sc);
+                        roomNumber.getRoom(statement, sc);
                         break;
                     case 4:
-                        Update.updateDetails(statement,sc);
+                        Update.updateDetails(statement, sc);
                         break;
                     case 5:
-                        Deletion.delete(statement,sc);
+                        Deletion.delete(statement, sc);
                         break;
                     case 0:
                         shut.exit();
@@ -64,8 +59,9 @@ public class Main {
                         System.out.println("Invalid Choice!!!");
                 }
             }
-        } catch (InputMismatchException | SQLException | InterruptedException e){
-            System.out.println(e.getMessage());;
+        } catch (InputMismatchException | SQLException | InterruptedException e) {
+            System.out.println(e.getMessage());
+            ;
         }
 
     }

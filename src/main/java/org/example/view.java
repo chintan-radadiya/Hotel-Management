@@ -3,13 +3,11 @@ package org.example;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.sql.Connection;
 
 public class view {
     public static void viewReservations( Statement statement) throws SQLException{
 
         String sql = "SELECT * FROM reservations";
-
         ResultSet resultset = statement.executeQuery(sql);
 
         try{
@@ -32,7 +30,5 @@ public class view {
             System.out.println(e.getMessage());
         }
         resultset.close();
-
-
     }
 }

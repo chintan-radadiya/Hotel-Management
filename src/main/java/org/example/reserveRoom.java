@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.Scanner;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -14,7 +13,7 @@ public class reserveRoom {
             sc.nextLine();
 
             System.out.print("Enter Guest Mobile Number: ");
-            long mobile = sc.nextInt();
+            long mobile = sc.nextLong();
             sc.nextLine();
 
             System.out.print("Allocate a room to guest: ");
