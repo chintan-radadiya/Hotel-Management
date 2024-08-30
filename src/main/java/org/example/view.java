@@ -8,9 +8,9 @@ import java.sql.Connection;
 public class view {
     public static void viewReservations( Statement statement) throws SQLException{
 
-        String query = "SELECT * FROM reservations";
+        String sql = "SELECT * FROM reservations";
 
-        ResultSet resultset = statement.executeQuery(query);
+        ResultSet resultset = statement.executeQuery(sql);
 
         try{
             while(resultset.next()){
