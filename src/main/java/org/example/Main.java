@@ -51,6 +51,7 @@ public class Main {
                     case 4:
                         break;
                     case 5:
+                        Deletion.delete(statement,sc);
                         break;
                     case 0:
                         shut.exit();
