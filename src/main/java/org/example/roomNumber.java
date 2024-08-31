@@ -25,6 +25,7 @@ public class roomNumber {
                 System.out.print("Room no. is: " + resultset.getInt("room_number"));
             }
 
+            resultset.close();
         }catch(SQLException e){
             e.printStackTrace();
         }

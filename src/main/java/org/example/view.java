@@ -26,6 +26,8 @@ public class view {
                 System.out.println("Date of Booking : " + resv_date);
                 System.out.println("************************");
             }
+
+            resultset.close();
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }

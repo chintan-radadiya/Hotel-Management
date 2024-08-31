@@ -57,8 +57,11 @@ public class Main {
 
                     default:
                         System.out.println("Invalid Choice!!!");
+            statement.close();
+            connection.close();
                 }
             }
+
         } catch (InputMismatchException | SQLException | InterruptedException e) {
             System.out.println(e.getMessage());
         }
